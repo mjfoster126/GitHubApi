@@ -7,48 +7,50 @@
 
 import Foundation
 
-struct CommitObject {
+struct CommitObject: Codable {
     var sha: String
-    var nodeId: String
+    var node_id: String
     var commit: Commit
     var url: String
+    var html_url: String
     var comments_url: String
     var author: UserInfo
-    var commitier: UserInfo
-    var parents: ParentsInfo
+    var committer: UserInfo
+    var parents: [ParentsInfo]
+    
 }
 
-struct Commit {
+struct Commit: Codable {
     var author: SmallUserInfo
     var committer: SmallUserInfo
     var message: String
     var tree: TreeInfo
     var url: String
     var comment_count: Int
-    var varification: VerificationInfo
+    var verification: VerificationInfo
 }
 
-struct SmallUserInfo {
+struct SmallUserInfo: Codable {
     var name: String
     var email: String
     var date: String
 }
 
-struct TreeInfo {
+struct TreeInfo: Codable {
     var sha: String
     var url: String
 }
 
-struct VerificationInfo {
+struct VerificationInfo: Codable {
     var verified: Bool
     var reason: String
-    var signature: String
-    var payload: String
+    var signature: String?
+    var payload: String?
 }
 
-struct UserInfo {
+struct UserInfo: Codable {
     var login: String
-    var id: String
+    var id: Int
     var node_id: String
     var avatar_url: String
     var gravatar_id: String
@@ -62,12 +64,12 @@ struct UserInfo {
     var organizations_url: String
     var repos_url: String
     var events_url: String
-    var recieved_events_url: String
+    var received_events_url: String
     var type: String
-    var site_admin: String
+    var site_admin: Bool
 }
 
-struct ParentsInfo {
+struct ParentsInfo: Codable {
     var sha: String
     var url: String
     var html_url: String
