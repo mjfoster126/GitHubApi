@@ -16,6 +16,11 @@
 		0FDEA8852587006000135CCC /* commitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA8842587006000135CCC /* commitCell.swift */; };
 		0FDEA888258708EC00135CCC /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA887258708EC00135CCC /* extensions.swift */; };
 		0FDEA88C258716F000135CCC /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA88B258716F000135CCC /* model.swift */; };
+		0FDEA8902587D2AE00135CCC /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA88F2587D2AE00135CCC /* GitHubApi.swift */; };
+		0FDEA8942587D2E000135CCC /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA8932587D2E000135CCC /* EndpointType.swift */; };
+		0FDEA8972587D30700135CCC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA8962587D30700135CCC /* Networking.swift */; };
+		0FDEA89A2587D52000135CCC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA8992587D52000135CCC /* Response.swift */; };
+		0FDEA89D2587D64900135CCC /* CommitModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA89C2587D64900135CCC /* CommitModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		0FDEA8842587006000135CCC /* commitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commitCell.swift; sourceTree = "<group>"; };
 		0FDEA887258708EC00135CCC /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		0FDEA88B258716F000135CCC /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		0FDEA88F2587D2AE00135CCC /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
+		0FDEA8932587D2E000135CCC /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		0FDEA8962587D30700135CCC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		0FDEA8992587D52000135CCC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0FDEA89C2587D64900135CCC /* CommitModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 		0FDEA86A2586EDDD00135CCC /* GitHubSwift */ = {
 			isa = PBXGroup;
 			children = (
+				0FDEA88E2587D26F00135CCC /* Networking */,
 				0FDEA8822586EF1D00135CCC /* Model */,
 				0FDEA8812586EF1500135CCC /* View */,
 				0FDEA8802586EF0500135CCC /* Controller */,
@@ -96,8 +107,20 @@
 			isa = PBXGroup;
 			children = (
 				0FDEA88B258716F000135CCC /* model.swift */,
+				0FDEA89C2587D64900135CCC /* CommitModelData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0FDEA88E2587D26F00135CCC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0FDEA88F2587D2AE00135CCC /* GitHubApi.swift */,
+				0FDEA8932587D2E000135CCC /* EndpointType.swift */,
+				0FDEA8962587D30700135CCC /* Networking.swift */,
+				0FDEA8992587D52000135CCC /* Response.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDEA8942587D2E000135CCC /* EndpointType.swift in Sources */,
+				0FDEA89D2587D64900135CCC /* CommitModelData.swift in Sources */,
 				0FDEA888258708EC00135CCC /* extensions.swift in Sources */,
 				0FDEA88C258716F000135CCC /* model.swift in Sources */,
+				0FDEA8972587D30700135CCC /* Networking.swift in Sources */,
+				0FDEA89A2587D52000135CCC /* Response.swift in Sources */,
 				0FDEA8852587006000135CCC /* commitCell.swift in Sources */,
 				0FDEA8702586EDDD00135CCC /* ViewController.swift in Sources */,
 				0FDEA86C2586EDDD00135CCC /* AppDelegate.swift in Sources */,
+				0FDEA8902587D2AE00135CCC /* GitHubApi.swift in Sources */,
 				0FDEA86E2586EDDD00135CCC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
