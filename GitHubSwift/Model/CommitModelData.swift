@@ -10,14 +10,14 @@ import Foundation
 class CommitModelData {
 
     private let networking = Networking()
-
     private var commits: [CommitObject]?
 
     public func getCommits(user: String, repo: String, completion: (() -> Void)?) {
+        
         networking.performNetworkTask(endpoint: GitHubApi.commits(user: user,repo:repo),
                                       type: CommitObject.self) { [weak self] (response) in
-                                        self?.commits = response
-                                        completion?()
+                                            self?.commits = response
+                                            completion?()
         }
     }
 

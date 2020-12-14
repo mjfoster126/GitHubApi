@@ -11,7 +11,6 @@ import Foundation
 class ViewController: UIViewController {
     
     let tableview = UITableView()
-    var commits = [CommitObject]()
     let commitResults = CommitModelData()
     
     override func viewDidLoad() {
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commitResults.count
