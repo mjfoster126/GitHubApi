@@ -56,15 +56,39 @@
 		0FDEA86A2586EDDD00135CCC /* GitHubSwift */ = {
 			isa = PBXGroup;
 			children = (
+				0FDEA8822586EF1D00135CCC /* Model */,
+				0FDEA8812586EF1500135CCC /* View */,
+				0FDEA8802586EF0500135CCC /* Controller */,
 				0FDEA86B2586EDDD00135CCC /* AppDelegate.swift */,
 				0FDEA86D2586EDDD00135CCC /* SceneDelegate.swift */,
-				0FDEA86F2586EDDD00135CCC /* ViewController.swift */,
-				0FDEA8712586EDDE00135CCC /* Main.storyboard */,
 				0FDEA8742586EDDE00135CCC /* Assets.xcassets */,
 				0FDEA8762586EDDF00135CCC /* LaunchScreen.storyboard */,
 				0FDEA8792586EDDF00135CCC /* Info.plist */,
 			);
 			path = GitHubSwift;
+			sourceTree = "<group>";
+		};
+		0FDEA8802586EF0500135CCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FDEA86F2586EDDD00135CCC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FDEA8812586EF1500135CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FDEA8712586EDDE00135CCC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FDEA8822586EF1D00135CCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
