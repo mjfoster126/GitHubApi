@@ -44,10 +44,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "commitCell", for: indexPath) as! commitCell
         
         let row = commitResults.commitRow(index: indexPath.row)
+        
         cell.author.text = row?.commit.committer.name
-        cell.dateTime.text = row?.commit.committer.date
+        cell.dateTime.convertDate(dateString: (row?.commit.committer.date)!, date: cell.dateTime)
         cell.sha.text = row?.sha
         cell.commitDescription.text = row?.commit.message
+        
         return cell
     }
     
