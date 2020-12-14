@@ -61,7 +61,12 @@ extension UILabel {
 
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func downloadImage(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        
+        if (imgCache[url.absoluteString] != nil){
+            self.image = imgCache[url.absoluteString]
+            return
+        }
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -72,6 +77,7 @@ extension UIImageView {
                 else { return }
             
             DispatchQueue.main.async() { [weak self] in
+                imgCache[url.absoluteString] = image
                 self?.image = image
             }
         }.resume()

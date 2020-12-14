@@ -47,8 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dateTime.convertDate(dateString: (row?.commit.committer.date)!, date: cell.dateTime)
         cell.sha.text = row?.sha
         cell.commitDescription.text = row?.commit.message
-        let url = URL(string: (row?.committer.avatar_url)!)
-        cell.userImage.downloaded(from: url!)
+        cell.userImage.downloadImage(from: URL(string: (row?.committer.avatar_url)!)!)
         
         return cell
     }
