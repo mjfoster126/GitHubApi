@@ -8,21 +8,21 @@
 import Foundation
 
 struct CommitObject: Codable {
-    var sha: String
+    var sha: String?
     var node_id: String
     var commit: Commit
     var url: String
     var html_url: String
     var comments_url: String
-    var author: UserInfo
-    var committer: UserInfo
+    var author: DetailedUserInfo
+    var committer: DetailedUserInfo
     var parents: [ParentsInfo]
     
 }
 
 struct Commit: Codable {
-    var author: SmallUserInfo
-    var committer: SmallUserInfo
+    var author: UserInfo
+    var committer: UserInfo
     var message: String
     var tree: TreeInfo
     var url: String
@@ -30,7 +30,7 @@ struct Commit: Codable {
     var verification: VerificationInfo
 }
 
-struct SmallUserInfo: Codable {
+struct UserInfo: Codable {
     var name: String
     var email: String
     var date: String
@@ -48,7 +48,7 @@ struct VerificationInfo: Codable {
     var payload: String?
 }
 
-struct UserInfo: Codable {
+struct DetailedUserInfo: Codable {
     var login: String
     var id: Int
     var node_id: String
