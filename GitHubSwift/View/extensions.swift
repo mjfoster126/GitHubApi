@@ -43,5 +43,24 @@ extension UIView {
  }
  
  }
- 
 }
+
+extension UILabel {
+    func convertDate(dateString: String, date: UILabel){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
+
+        let dateObj = dateFormatter.date(from: dateString)
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        
+        date.text = dateFormatter.string(from: dateObj!)
+    }
+}
+
+
+
+   
+
+   
