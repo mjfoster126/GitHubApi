@@ -8,7 +8,7 @@
 import Foundation
 
 struct CommitObject: Codable {
-    var sha: String?
+    var sha: String
     var node_id: String
     var commit: Commit
     var url: String
