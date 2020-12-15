@@ -57,7 +57,8 @@ class commitCell: UITableViewCell {
         
         dateTime.anchor(top: author.bottomAnchor, left: userImage.rightAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: frame.size.width - userImage.frame.width, height: 25, enableInsets: false)
         
-        commitDescription.anchor(top: userImage.bottomAnchor, left: userImage.rightAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 6, paddingBottom: 10, paddingRight: 0, width: frame.size.width - userImage.frame.width - 10, height: 0, enableInsets: false)
+        commitDescription.anchor(top: userImage.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 10, paddingBottom: 10, paddingRight: 0, width: frame.size.width, height: 0, enableInsets: false)
+        
         
         sha.anchor(top: commitDescription.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 10, paddingRight: 10, width: frame.size.width, height: 0, enableInsets: false)
          
