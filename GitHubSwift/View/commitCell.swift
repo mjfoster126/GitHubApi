@@ -30,6 +30,7 @@ class commitCell: UITableViewCell {
         let img = UIImageView()
         img.backgroundColor = .brown
         img.layer.cornerRadius = 25
+        img.clipsToBounds = true
         return img
     }()
     let commitDescription: UITextView = {
